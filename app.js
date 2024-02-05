@@ -1,9 +1,11 @@
 let card_id;
 
+const apiPath = "https://api.sheety.co/64c3d1d28ec1e2d2861f4303f9cfa355/camunbankia";
+
 async function search() {
     searchTerm = document.getElementById('searchInput').value;
 
-    const response = await fetch(`https://api.sheety.co/64c3d1d28ec1e2d2861f4303f9cfa355/camunbankia/cards?filter[cardNum]=${searchTerm}`);
+    const response = await fetch(`${apiPath}/cards?filter[cardNum]=${searchTerm}`);
     const data = await response.json();
 
     const searchStatusElement = document.getElementById('searchStatus');
@@ -41,7 +43,7 @@ async function update() {
         }
     };
 
-    const response = await fetch(`https://api.sheety.co/64c3d1d28ec1e2d2861f4303f9cfa355/camunbankia/cards/${card_id}`, {
+    const response = await fetch(`${apiPath}/cards/${card_id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
