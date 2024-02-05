@@ -1,0 +1,22 @@
+{
+  "name": "fake-old-os-bank-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcqw/fake-old-os-bank-app.git"
+  },
+  "author": "William Marcq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcqw/fake-old-os-bank-app/issues"
+  },
+  "homepage": "https://github.com/marcqw/fake-old-os-bank-app#readme",
+  "devDependencies": {
+    "electron": "^28.2.1"
+  }
+}
