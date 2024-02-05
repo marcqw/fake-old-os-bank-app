@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/marcqw/fake-old-os-bank-app#readme",
   "devDependencies": {
+    "@electron/packager": "^18.1.3",
     "electron": "^28.2.1"
   }
 }
