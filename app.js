@@ -37,13 +37,37 @@ let card_id;
 
 
 
+        async function update() {
+            const object1Value = document.getElementById('object1').value;
+            const object2Value = document.getElementById('object2').value;
+
+            let body = {
+                card: {
+                    "plafond1": object1Value,
+                    "plafond2": object2Value,
+                }
+            }
 
 
 
+            // Effectuer un appel POST à votre API avec les nouvelles valeurs
+            const response = await fetch(`https://api.sheety.co/64c3d1d28ec1e2d2861f4303f9cfa355/camunbankia/cards/${card_id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body),
+            });
 
-        function update() {
+            // Afficher le message de statut
+            const updateStatusElement = document.getElementById('updateStatus');
+            if (response.ok) {
+                updateStatusElement.style.display = 'block';
+                updateStatusElement.innerHTML = 'Mise à jour réussie !';
+            } else {
+                const errorMessage = await response.text();
+                updateStatusElement.style.display = 'block';
 
-            const resultBlock = document.getElementById('resultBlock');
-            resultBlock.style.display = 'block';
-
+                updateStatusElement.innerHTML = `Erreur: ${errorMessage}`;
+            }
         }
