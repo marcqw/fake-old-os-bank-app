@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/tuicss@2.1/dist/tuicss.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tuicss@2.1/dist/tuicss.min.css">
+    <style>
+        ul li {
+            display: inline-block;
+            margin-right: 60px;
+        }
+
+        .hidden-element {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tui-screen-800-600 bordered white-168 tui-bg-blue-black center">
+
+        <div class="tui-window full-width tui-no-shadow left-align">
+            <fieldset class="tui-fieldset no-legend">
+                <ul>
+                    <li><a class="white-255-hover black-text-hover cursor-pointer inline">Menu</a></li>
+                    <li><a class="white-255-hover black-text-hover cursor-pointer inline">Reports</a></li>
+                    <li><a class="white-255-hover black-text-hover cursor-pointer inline">Print</a></li>
+                    <li><a class="white-255-hover black-text-hover cursor-pointer inline">Admin</a></li>
+                </ul>
+            </fieldset>
+        </div>
+
+        <div class="tui-window" style="margin-top: 60px;">
+            <fieldset class="tui-fieldset">
+                <legend class="white-255-text center">Register</legend>
+                <div style="display: inline-block; width: 500px">
+                    <span class="yellow-255-text">C</span>ard Number.....:
+                    <input style="width: 220px" class="tui-input" type="text" value="4165 3885 9571 2573"
+                        id="searchInput" /><br>
+                </div>
+
+                <br><br>
+                <button class="tui-button" onclick="search()"><span class="yellow-255-text">n</span>ew</button>
+                <button class="tui-button"><span class="yellow-255-text">r</span>eset</button>
+                <br><br>
+                <div id="searchStatus" class="hidden-element"></div>
+            </fieldset>
+        </div>
+        <div class="hidden-element" id="resultBlock">
+            <div class="tui-window" style="margin-top: 60px;">
+                <fieldset class="tui-fieldset">
+                    <legend class="white-255-text center">Register</legend>
+
+                    <div style="display: inline-block; width: 500px" id="resultContainer">
+
+                        
+
+                    </div>
+
+                    <br><br>
+                    <button class="tui-button"><span class="yellow-255-text">n</span>ew</button>
+                    <button class="tui-button"><span class="yellow-255-text">d</span>el</button>
+
+                </fieldset>
+            </div>
+        </div>
+        <div class="tui-statusbar blue-255 white-255-text absolute left-align">
+            <ul>
+                <li><a>09/06/2019</a></li>
+                <li><a>Service Orders Count: 2</a></li>
+                <li><a>10:43:00 PM</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
